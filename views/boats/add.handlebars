@@ -1,0 +1,30 @@
+<h3>
+  <span style="color:red">Add </span>New Boat</h3>
+
+
+<div class="row">
+  <form action="/boats" class="col s12" method="POST" enctype="multipart/form-data">
+    <div class="row">
+      <div class="input-field">
+        <input type="text" name="owner_name">
+        <label for="owner_name">Owner Name</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="text" name="boat_number">
+        <label for="boat_number">Boat Number</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" name="capacity">
+        <label for="capacity">Capacity(in Kgs)</label>
+      </div>
+    </div>
+
+    <input type="submit" value="Save" class="btn">
+  </form>
+</div>

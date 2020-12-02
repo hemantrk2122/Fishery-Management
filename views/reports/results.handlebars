@@ -1,0 +1,67 @@
+<h2>Welcome {{user.username}}</h2>
+{{#if boats}}
+<h4>Boats</h4>
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Owner </th>
+      <th>Boat Number </th>
+      <th>Capacity(in Kgs) </th>
+      <th>Registration Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each boats}}
+    <tr>
+      <td>
+        {{owner_name}}
+      </td>
+      <td>
+        {{boat_number}}
+      </td>
+      <td>
+        {{capacity}}
+      </td>
+      <td>{{formatDate date_created 'MMMM Do YYYY'}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{else if items}}
+<h4>Auctions</h4>
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Name </th>
+      <th>Boat Number </th>
+      <th>Amount of Fish(in Kgs) </th>
+      <th>Grade </th>
+      <th>Creation Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each items}}
+    <tr>
+      <td>
+        {{name}}
+      </td>
+      <td>
+        {{boat_number}}
+      </td>
+      <td>
+        {{amount_of_fish}}
+      </td>
+      <td>
+        {{grade}}
+      </td>
+      <td>{{formatDate date_created 'MMMM Do YYYY'}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<p>Nothing to show here..</p>
+{{/if}}

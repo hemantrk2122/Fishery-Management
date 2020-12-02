@@ -1,0 +1,75 @@
+<nav class="grey darken-3">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">Fish Auctions</a>
+      <a href="#" data-activates="main-menu" class="button-collapse show-on-large">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul class="right hide-on-small-only">
+        {{#if user}}
+        <li>
+          <a href="/dashboard">Welcome {{user.username}}
+          </a>
+        </li>
+
+        {{#if user.isAdmin}}
+        <li>
+          <a href="/boats/add">
+            Add New Boat
+          </a>
+        </li>
+        <li>
+          <a href="/reports">
+            Reports
+          </a>
+        </li>
+        {{/if}}
+
+        <li>
+          <a href="/users/logout">
+            <i class="fa fa-sign-out"></i> Logout
+          </a>
+        </li>
+        {{else}}
+        <li>
+          <a href="/items">
+            <i class="fa fa-shopping-cart"></i> Show Items</a>
+        </li> {{/if}}
+      </ul>
+      <ul class="side-nav" id="main-menu">
+
+        {{#if user}} {{else}}
+        <li>
+          <a href="/users/login" class="blue btn darken-1">
+            <i class="fa fa-sign-in left"> </i>
+            Login</a>
+        </li>
+        <li>
+          <a href="/users/register" class="red btn darken-1">
+            <i class="fa fa-user-plus left"></i>SignUp</a>
+        </li>
+        {{/if}}
+        <li>
+          <a href="/items">
+            <i class="fa fa-book"></i>Show Items</a>
+        </li>
+        {{#if user}}
+        <li class="divider"></li>
+        <li>
+          <a href="/dashboard">
+            <i class="fa fa-cog"></i>Dashboard</a>
+        </li>
+        <li>
+          <a href="/items/my">
+            <i class="fa fa-user"></i>My Items</a>
+        </li>
+        <li>
+          <a href="/users/logout">
+            <i class="fa fa-sign-out"></i>Logout</a>
+        </li>
+        {{/if}}
+
+      </ul>
+    </div>
+  </div>
+</nav>

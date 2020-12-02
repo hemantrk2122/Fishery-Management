@@ -1,0 +1,11 @@
+<h1>Welcome</h1>
+<h5>Welcome to Fish Auctions 1.0.0</h5>
+<p>Post your items for bidding and bid on items others have posted. All the bids are completely confedential. At the end
+  of
+  Bid time, Successful bidder will be announced. </p>
+{{#if user}} {{else}}
+<a href="/users/register" class="red btn darken-1">
+  <i class="fa fa-user-plus left"> </i>SignUp</a>
+<a href="/users/login" class="blue btn darken-1">
+  <i class="fa fa-sign-in left"> </i>Login with Username</a>
+{{/if}}

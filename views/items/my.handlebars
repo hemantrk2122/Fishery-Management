@@ -1,0 +1,27 @@
+<h3>Your Items Sorted</h3>
+
+<div class="row">
+
+  {{#each items}}
+  <div class="col s12 m4">
+    <div class="card hoverable">
+      {{!-- <a href="/items/edit/{{id}}" class="btn-floating halfway-fab red">
+        <i class="fa fa-pencil"></i>
+      </a> --}}
+      <div class="card-image">
+
+        <img src="/{{image}}">
+      </div>
+      <div class="card-title center"><span class="card-title dash-status">{{truncate name 15}}</span></div>
+      <div class="card-content">
+        <p class="story-text"> {{stripTags (truncate description 120)}}</p>
+      </div>
+      <div class="card-action">
+        <a href="/items/show/{{id}}">More About it</a>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <p>No Items to show.</p>
+  {{/each}}
+</div>

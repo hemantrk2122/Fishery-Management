@@ -1,0 +1,34 @@
+<h3>
+  <span style="color:red">Select </span>Fields</h3>
+
+
+<div class="row">
+  <form action="/reports" class="col s12" method="POST" enctype="multipart/form-data">
+
+    <div class="row">
+      <div class="input-field">
+        <select name="report">
+          <option value="boats" selected>Boats</option>
+          <option value="items">Auctions</option>
+        </select>
+        <label for="report">Report On</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="start_date">Start Date</label>
+      <div class="input-field">
+        <input type="date" name="start_date">
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="end_date">End Date</label>
+      <div class="input-field">
+        <input type="date" name="end_date">
+      </div>
+    </div>
+
+    <input type="submit" value="Save" class="btn">
+  </form>
+</div>
